@@ -1,0 +1,39 @@
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: thebest1
+      POSTGRES_DB: my_api
+    ports:
+      - "5437:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=xsaint@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=xsaint
+    ports:
+      - "5050:80"
+  
+  mysql:
+    image: mysql:5
+    environment:
+      - MYSQL_ROOT_PASSWORD=thebest1
+      - MYSQL_DATABASE=my_api
+      - MYSQL_PORT=3306
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_HOST=mysql
+      - MYSQL_ROOT_PASSWORD=thebest1
+    ports:
+      - "8080:80"
