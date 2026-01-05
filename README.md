@@ -19,6 +19,6 @@ I made this project to improve more my skills as backend and put in practice new
 • Relational data modeling with Sequelize <br />
 
 ## How to run
-• docker-compose up -d postgres
-• docker-compose up -d pgadmin
-• npm run dev
+• docker-compose up -d postgres <br />
+• docker-compose up -d pgadmin <br />
+• npm run dev <br />
