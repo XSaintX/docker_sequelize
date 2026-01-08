@@ -4,7 +4,7 @@ services:
     image: postgres:13
     environment:
       POSTGRES_USER: user
-      POSTGRES_PASSWORD: thebest1
+      POSTGRES_PASSWORD: xsaint
       POSTGRES_DB: my_api
     ports:
       - "5437:5432"
@@ -22,7 +22,7 @@ services:
   mysql:
     image: mysql:5
     environment:
-      - MYSQL_ROOT_PASSWORD=thebest1
+      - MYSQL_ROOT_PASSWORD=xsaint
       - MYSQL_DATABASE=my_api
       - MYSQL_PORT=3306
     ports:
@@ -34,6 +34,6 @@ services:
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_HOST=mysql
-      - MYSQL_ROOT_PASSWORD=thebest1
+      - MYSQL_ROOT_PASSWORD=xsaint
     ports:
       - "8080:80"
